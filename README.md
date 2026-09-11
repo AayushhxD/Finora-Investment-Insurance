@@ -1,2 +1,2 @@
 # Finora-Investment-Insurance
-Finora Investment &amp; Insurance CRM
+Finora Investment &amp; Insurance website
