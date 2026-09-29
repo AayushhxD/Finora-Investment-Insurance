@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "migrate": "node ./scripts/migrate.js",
-    "build": "next build",
-    "start": "next start"
+    "dev": "next dev frontend --webpack",
+    "migrate": "node ./backend/scripts/migrate.js",
+    "build": "next build frontend --webpack",
+    "start": "next start frontend"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
