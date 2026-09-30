@@ -1,4 +1,4 @@
-import { getCustomerFullProfile } from '@backend/actions/customers'
+import { getCustomerFullProfile } from '@backend/modules/customers/presentation/actions'
 import { CustomerDetailClient } from '@/components/customers/customer-detail'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'

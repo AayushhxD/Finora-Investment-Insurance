@@ -2,7 +2,7 @@
 import { fmtDate } from '@/lib/fmt-date'
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { sendMessage } from '@backend/actions/messages'
+import { sendMessage } from '@backend/modules/messages/presentation/actions'
 import Link from 'next/link'
 import type { Application, Document, Message, Renewal, Referral, Reward, ActivityLog, Staff } from '@shared/types/store-types'
 

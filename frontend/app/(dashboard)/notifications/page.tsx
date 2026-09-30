@@ -1,4 +1,4 @@
-import { getNotifications, markAllNotificationsRead } from '@backend/actions/activity'
+import { getNotifications, markAllNotificationsRead } from '@backend/modules/activity/presentation/actions'
 import NotificationsClient from '@/components/notifications/notifications-client'
 
 export default async function NotificationsPage() {

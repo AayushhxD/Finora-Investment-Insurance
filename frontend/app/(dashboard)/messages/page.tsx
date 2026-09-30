@@ -1,7 +1,7 @@
-import { getAllMessages } from '@backend/actions/messages'
-import { getCustomers } from '@backend/actions/customers'
+import { getAllMessages } from '@backend/modules/messages/presentation/actions'
+import { getCustomers } from '@backend/modules/customers/presentation/actions'
 import MessagesClient from '@/components/messages/messages-client'
-import { auth } from '@backend/lib/auth'
+import { auth } from '@backend/infrastructure/auth/server'
 import { headers } from 'next/headers'
 
 export default async function MessagesPage() {

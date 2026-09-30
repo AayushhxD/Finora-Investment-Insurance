@@ -1,7 +1,7 @@
 'use client'
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { distributeLead, distributeAllUnassigned } from '@backend/actions/lead-distribution'
+import { distributeLead, distributeAllUnassigned } from '@backend/modules/lead-distribution/presentation/actions'
 import type { Staff } from '@shared/types/store-types'
 import { Target, ArrowLeftRight, Settings, Users, Plus } from 'lucide-react'
 

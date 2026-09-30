@@ -1,5 +1,5 @@
-import { getLeadDistributionData } from '@backend/actions/lead-distribution'
-import { getStaff } from '@backend/actions/staff'
+import { getLeadDistributionData } from '@backend/modules/lead-distribution/presentation/actions'
+import { getStaff } from '@backend/modules/staff/presentation/actions'
 import LeadDistributionClient from '@/components/lead-distribution/lead-distribution-client'
 
 export default async function LeadDistributionPage() {

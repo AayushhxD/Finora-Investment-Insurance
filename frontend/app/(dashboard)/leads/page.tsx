@@ -1,6 +1,6 @@
-import { getLeads } from '@backend/actions/leads'
-import { getStaff } from '@backend/actions/staff'
-import { getCustomers } from '@backend/actions/customers'
+import { getLeads } from '@backend/modules/leads/presentation/actions'
+import { getStaff } from '@backend/modules/staff/presentation/actions'
+import { getCustomers } from '@backend/modules/customers/presentation/actions'
 import LeadsClient from '@/components/leads/leads-client'
 
 export default async function LeadsPage() {

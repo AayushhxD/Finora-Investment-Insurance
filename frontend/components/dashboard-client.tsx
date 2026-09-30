@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { addInvestment } from '@backend/actions/investments'
+import { addInvestment } from '@backend/modules/investments/presentation/actions'
 import { ShieldCheck } from 'lucide-react'
 
 type Product = { id: number; name: string; category: string; fundSize: string; returnPa: string; risk: string }

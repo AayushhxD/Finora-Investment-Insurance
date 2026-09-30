@@ -1,7 +1,7 @@
-import { getApplications } from '@backend/actions/applications'
-import { getCustomers } from '@backend/actions/customers'
-import { getStaff } from '@backend/actions/staff'
-import { getActiveProducts } from '@backend/actions/products'
+import { getApplications } from '@backend/modules/applications/presentation/actions'
+import { getCustomers } from '@backend/modules/customers/presentation/actions'
+import { getStaff } from '@backend/modules/staff/presentation/actions'
+import { getActiveProducts } from '@backend/modules/products/presentation/actions'
 import { ApplicationsClient } from '@/components/applications/application-list'
 
 export default async function ApplicationsPage() {

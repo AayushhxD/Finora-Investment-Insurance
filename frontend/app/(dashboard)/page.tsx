@@ -1,8 +1,8 @@
-import { getDashboardStats } from '@backend/actions/applications'
-import { getStaff } from '@backend/actions/staff'
-import { getApplications } from '@backend/actions/applications'
+import { getDashboardStats } from '@backend/modules/applications/presentation/actions'
+import { getStaff } from '@backend/modules/staff/presentation/actions'
+import { getApplications } from '@backend/modules/applications/presentation/actions'
 import FinoraDashboard from '@/components/dashboard/finora-dashboard'
-import { auth } from '@backend/lib/auth'
+import { auth } from '@backend/infrastructure/auth/server'
 import { headers } from 'next/headers'
 
 function formatAgo(iso: string) {

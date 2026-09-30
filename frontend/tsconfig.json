@@ -14,11 +14,10 @@
     "module": "esnext",
     "esModuleInterop": true,
     "moduleResolution": "bundler",
-    "baseUrl": "..",
     "paths": {
-      "@/*": ["frontend/*"],
-      "@backend/*": ["backend/*"],
-      "@shared/*": ["shared/*"]
+      "@/*": ["./*"],
+      "@backend/*": ["../backend/*"],
+      "@shared/*": ["../shared/*"]
     },
     "resolveJsonModule": true,
     "isolatedModules": true,

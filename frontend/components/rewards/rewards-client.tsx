@@ -1,7 +1,7 @@
 'use client'
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { updateRewardStatus, updateRewardRule } from '@backend/actions/rewards'
+import { updateRewardStatus, updateRewardRule } from '@backend/modules/rewards/presentation/actions'
 import type { RewardStatus, RewardRule } from '@shared/types/store-types'
 import { Gift, Settings } from 'lucide-react'
 

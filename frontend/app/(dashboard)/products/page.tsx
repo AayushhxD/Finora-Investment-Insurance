@@ -1,4 +1,4 @@
-import { getProducts } from '@backend/actions/products'
+import { getProducts } from '@backend/modules/products/presentation/actions'
 import ProductsClient from '@/components/products/products-client'
 
 export default async function ProductsPage() {

@@ -2,7 +2,7 @@
 import { useState, useTransition } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { createLead } from '@backend/actions/leads'
+import { createLead } from '@backend/modules/leads/presentation/actions'
 import { Users, FileText, AlertCircle, RefreshCw, Plus, TrendingUp, X } from 'lucide-react'
 import type { Staff } from '@shared/types/store-types'
 

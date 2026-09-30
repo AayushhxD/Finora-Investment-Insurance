@@ -1,4 +1,4 @@
-import { getRewards, getRewardStats, getRewardRules } from '@backend/actions/rewards'
+import { getRewards, getRewardStats, getRewardRules } from '@backend/modules/rewards/presentation/actions'
 import RewardsClient from '@/components/rewards/rewards-client'
 
 export default async function RewardsPage() {

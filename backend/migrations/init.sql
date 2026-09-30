@@ -1,4 +1,4 @@
--- Initial schema for app (matches lib/db/schema.ts)
+-- Initial schema for app (matches infrastructure/database/schema.ts)
 
 CREATE TABLE IF NOT EXISTS "user" (
   id TEXT PRIMARY KEY,
@@ -122,6 +122,28 @@ CREATE TABLE IF NOT EXISTS customers (
   CONSTRAINT customers_status_check CHECK (status IN ('active', 'inactive', 'prospect'))
 );
 
+CREATE TABLE IF NOT EXISTS staff_profiles (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id TEXT NOT NULL UNIQUE REFERENCES "user"(id) ON DELETE RESTRICT,
+  employee_code TEXT NOT NULL UNIQUE,
+  designation TEXT NOT NULL,
+  department TEXT,
+  phone TEXT,
+  status TEXT NOT NULL DEFAULT 'active',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  CONSTRAINT staff_profiles_status_check CHECK (status IN ('active', 'inactive'))
+);
+
+CREATE TABLE IF NOT EXISTS customer_assignment_history (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  customer_id TEXT NOT NULL REFERENCES customers(id) ON DELETE CASCADE,
+  from_staff_id TEXT REFERENCES "user"(id) ON DELETE SET NULL,
+  to_staff_id TEXT NOT NULL REFERENCES "user"(id) ON DELETE RESTRICT,
+  changed_by_id TEXT NOT NULL REFERENCES "user"(id) ON DELETE RESTRICT,
+  changed_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
 -- Indexes
 CREATE INDEX IF NOT EXISTS idx_user_email ON "user" (email);
 CREATE INDEX IF NOT EXISTS idx_session_userId ON "session" ("userId");
@@ -133,6 +155,9 @@ CREATE UNIQUE INDEX IF NOT EXISTS customers_pan_number_key ON customers (pan_num
 CREATE UNIQUE INDEX IF NOT EXISTS customers_referral_code_key ON customers (referral_code);
 CREATE INDEX IF NOT EXISTS customers_created_by_id_idx ON customers (created_by_id);
 CREATE INDEX IF NOT EXISTS customers_assigned_staff_id_idx ON customers (assigned_staff_id);
+CREATE INDEX IF NOT EXISTS staff_profiles_status_idx ON staff_profiles (status);
+CREATE INDEX IF NOT EXISTS customer_assignment_history_customer_idx ON customer_assignment_history (customer_id, changed_at);
+CREATE INDEX IF NOT EXISTS customer_assignment_history_to_staff_idx ON customer_assignment_history (to_staff_id);
 
 -- Keep Better Auth records inaccessible through Supabase's public Data API.
 ALTER TABLE "user" ENABLE ROW LEVEL SECURITY;
@@ -144,3 +169,5 @@ ALTER TABLE user_investments ENABLE ROW LEVEL SECURITY;
 ALTER TABLE insurance_policies ENABLE ROW LEVEL SECURITY;
 ALTER TABLE audit_logs ENABLE ROW LEVEL SECURITY;
 ALTER TABLE customers ENABLE ROW LEVEL SECURITY;
+ALTER TABLE staff_profiles ENABLE ROW LEVEL SECURITY;
+ALTER TABLE customer_assignment_history ENABLE ROW LEVEL SECURITY;

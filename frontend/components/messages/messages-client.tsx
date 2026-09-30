@@ -2,7 +2,7 @@
 import { fmtDate } from '@/lib/fmt-date'
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { sendMessageToCustomer } from '@backend/actions/messages'
+import { sendMessageToCustomer } from '@backend/modules/messages/presentation/actions'
 import type { Customer } from '@shared/types/store-types'
 import { Plus, MessageSquare } from 'lucide-react'
 
