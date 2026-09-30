@@ -1,5 +1,5 @@
-import { getCustomerById } from '@backend/actions/customers'
-import { getApplications } from '@backend/actions/applications'
+import { getCustomerById } from '@backend/modules/customers/presentation/actions'
+import { getApplications } from '@backend/modules/applications/presentation/actions'
 import PortalLayout from '@/components/portal/portal-layout'
 import PortalApplications from '@/components/portal/portal-applications'
 import { notFound } from 'next/navigation'

@@ -5,11 +5,15 @@ export type StaffStatus = 'active' | 'inactive'
 
 export interface Staff {
   id: string
+  profileId?: string
+  employeeCode?: string
   name: string
   email: string
   phone: string
   role: StaffRole
   status: StaffStatus
+  designation?: string
+  department?: string | null
   specialty?: string
   maxCapacity?: number
   joinedAt: string

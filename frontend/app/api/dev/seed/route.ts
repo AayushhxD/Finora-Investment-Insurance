@@ -1,4 +1,4 @@
-import { auth } from '@backend/lib/auth'
+import { auth } from '@backend/infrastructure/auth/server'
 import { NextResponse } from 'next/server'
 
 // Dev-only: seed a user into the auth adapter (memory or DB) so you can sign in

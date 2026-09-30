@@ -2,7 +2,7 @@
 import { fmtDate } from '@/lib/fmt-date'
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { createLead, updateLeadStatus, convertLeadToCustomer, updateLead } from '@backend/actions/leads'
+import { createLead, updateLeadStatus, convertLeadToCustomer, updateLead } from '@backend/modules/leads/presentation/actions'
 import type { Lead, Staff, Customer, LeadStatus } from '@shared/types/store-types'
 import { Plus, Search, Briefcase, ArrowRight, X } from 'lucide-react'
 

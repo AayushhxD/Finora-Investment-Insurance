@@ -1,5 +1,5 @@
 import { fmtDate } from '@/lib/fmt-date'
-import { getCustomerFullProfile } from '@backend/actions/customers'
+import { getCustomerFullProfile } from '@backend/modules/customers/presentation/actions'
 import Link from 'next/link'
 import { FileText, FolderOpen, RefreshCw, Share2, Gift, MessageCircle } from 'lucide-react'
 

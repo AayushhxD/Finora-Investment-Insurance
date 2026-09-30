@@ -1,4 +1,4 @@
-import { getActivityLogs } from '@backend/actions/activity'
+import { getActivityLogs } from '@backend/modules/activity/presentation/actions'
 import ActivityClient from '@/components/activity/activity-client'
 
 export default async function ActivityPage() {

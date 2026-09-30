@@ -1,5 +1,5 @@
-import { getCustomerById } from '@backend/actions/customers'
-import { getDocuments } from '@backend/actions/documents'
+import { getCustomerById } from '@backend/modules/customers/presentation/actions'
+import { getDocuments } from '@backend/modules/documents/presentation/actions'
 import PortalLayout from '@/components/portal/portal-layout'
 import PortalDocuments from '@/components/portal/portal-documents' // Fixed missing import
 

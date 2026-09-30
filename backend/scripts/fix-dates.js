@@ -21,12 +21,12 @@ files.forEach(f => {
   if (fs.existsSync(p)) {
     let content = fs.readFileSync(p, 'utf8');
     if (content.includes('toLocaleDateString')) {
-      if (!content.includes("from '@backend/lib/fmt-date'")) {
+      if (!content.includes("from '@/lib/fmt-date'")) {
         // If there's 'use client', put import after it
         if (content.match(/^['"]use client['"]/m)) {
-          content = content.replace(/^(['"]use client['"]\r?\n)/m, `$1import { fmtDate } from '@backend/lib/fmt-date'\n`);
+          content = content.replace(/^(['"]use client['"]\r?\n)/m, `$1import { fmtDate } from '@/lib/fmt-date'\n`);
         } else {
-          content = `import { fmtDate } from '@backend/lib/fmt-date'\n` + content;
+          content = `import { fmtDate } from '@/lib/fmt-date'\n` + content;
         }
       }
       content = content.replace(/new Date\(([^)]+)\)\.toLocaleDateString\([^)]*\)/g, 'fmtDate($1)');

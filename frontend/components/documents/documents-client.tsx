@@ -2,7 +2,7 @@
 import { fmtDate } from '@/lib/fmt-date'
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { verifyDocument, rejectDocument } from '@backend/actions/documents'
+import { verifyDocument, rejectDocument } from '@backend/modules/documents/presentation/actions'
 import Link from 'next/link'
 import { Search, FileText } from 'lucide-react'
 

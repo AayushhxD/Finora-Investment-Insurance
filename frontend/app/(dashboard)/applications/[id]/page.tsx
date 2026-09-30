@@ -1,4 +1,4 @@
-import { getApplicationById } from '@backend/actions/applications'
+import { getApplicationById } from '@backend/modules/applications/presentation/actions'
 import { ApplicationDetailClient } from '@/components/applications/application-detail'
 import { notFound } from 'next/navigation'
 

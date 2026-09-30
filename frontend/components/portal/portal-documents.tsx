@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { createDocument } from '@backend/actions/documents'
+import { createDocument } from '@backend/modules/documents/presentation/actions'
 import { FileText, Upload, Plus, X } from 'lucide-react'
 import { fmtDate } from '@/lib/fmt-date'
 

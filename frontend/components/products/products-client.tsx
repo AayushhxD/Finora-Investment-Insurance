@@ -1,7 +1,7 @@
 'use client'
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { createProduct, updateProduct, deleteProduct } from '@backend/actions/products'
+import { createProduct, updateProduct, deleteProduct } from '@backend/modules/products/presentation/actions'
 import type { Product } from '@shared/types/store-types'
 import { Plus, Search, Package, Pencil, Trash2, TrendingUp, Shield, BarChart2, X } from 'lucide-react'
 

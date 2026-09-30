@@ -2,7 +2,7 @@
 import { fmtDate } from '@/lib/fmt-date'
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { markNotificationRead, markAllNotificationsRead } from '@backend/actions/activity'
+import { markNotificationRead, markAllNotificationsRead } from '@backend/modules/activity/presentation/actions'
 import type { Notification } from '@shared/types/store-types'
 import Link from 'next/link'
 import { Bell, Check, CheckCheck } from 'lucide-react'

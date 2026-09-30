@@ -1,8 +1,8 @@
-import { auth } from '@backend/lib/auth'
+import { auth } from '@backend/infrastructure/auth/server'
 import { headers } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { AppLayout } from '@/components/layout/app-layout'
-import { getNotifications } from '@backend/actions/activity'
+import { getNotifications } from '@backend/modules/activity/presentation/actions'
 
 export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
   let session

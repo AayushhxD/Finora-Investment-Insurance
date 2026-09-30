@@ -2,7 +2,7 @@
 import { fmtDate } from '@/lib/fmt-date'
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { createCustomer, updateCustomer, deleteCustomer } from '@backend/actions/customers'
+import { createCustomer, updateCustomer, deleteCustomer } from '@backend/modules/customers/presentation/actions'
 import type { Customer, Staff } from '@shared/types/store-types'
 import Link from 'next/link'
 import { Plus, Search, Users, Pencil, Trash2, Eye, Filter, ChevronUp, ChevronDown, ExternalLink, X } from 'lucide-react'

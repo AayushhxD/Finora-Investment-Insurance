@@ -2,12 +2,12 @@
 import { fmtDate } from '@/lib/fmt-date'
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { updateApplicationStatus, updateApplicationNotes, requestDocuments } from '@backend/actions/applications'
-import { verifyDocument, rejectDocument } from '@backend/actions/documents'
-import { sendMessage } from '@backend/actions/messages'
+import { updateApplicationStatus, updateApplicationNotes, requestDocuments } from '@backend/modules/applications/presentation/actions'
+import { verifyDocument, rejectDocument } from '@backend/modules/documents/presentation/actions'
+import { sendMessage } from '@backend/modules/messages/presentation/actions'
 import type { ApplicationStatus } from '@shared/types/store-types'
 import Link from 'next/link'
-import { APPLICATION_STATUS_FLOW } from '@backend/lib/store'
+import { APPLICATION_STATUS_FLOW } from '@backend/infrastructure/mock-store/store'
 
 const STATUS_COLORS: Record<string, string> = {
   COMPLETED: 'badge-green', PROCESSING: 'badge-blue', DOCUMENTS_REQUESTED: 'badge-yellow',

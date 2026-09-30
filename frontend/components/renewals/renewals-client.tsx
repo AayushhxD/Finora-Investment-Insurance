@@ -2,7 +2,7 @@
 import { fmtDate } from '@/lib/fmt-date'
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { updateRenewalStatus, sendRenewalReminder } from '@backend/actions/renewals'
+import { updateRenewalStatus, sendRenewalReminder } from '@backend/modules/renewals/presentation/actions'
 import type { RenewalStatus } from '@shared/types/store-types'
 import Link from 'next/link'
 import { Search, RefreshCw, Bell } from 'lucide-react'
