@@ -15,5 +15,5 @@ node_modules
 .DS_Store
 
 # Local agent skills
-.agents
+.agents/
 skills-lock.json
